@@ -1,0 +1,88 @@
+<view class="container">
+  <view class="flex-box category-box">
+    <navigator class="flex-item" url="/pages/quwen/index?type=YL"  open-type="navigate"  hover-class="navigator-hover">
+      <image src="/icons/yulu.png"></image>
+      <view class="txt-box">
+        <text>语录</text>
+      </view>
+    </navigator>
+    <navigator class="flex-item" url="/pages/quwen/index?type=DY" open-type="navigate" hover-class="navigator-hover">
+      <image src="/icons/duanyu.png"></image>
+      <view class="txt-box">
+        <text>短语</text>
+      </view>
+    </navigator>
+    <navigator class="flex-item"  url="/pages/quwen/index?type=DZ"  open-type="navigate"  hover-class="navigator-hover">
+      <image src="/icons/duanzi.png"></image>
+      <view class="txt-box">
+        <text>段子</text>
+      </view>
+    </navigator>
+
+    <navigator class="flex-item" url="/pages/quwen/index?type=XH"  open-type="navigate"  hover-class="navigator-hover">
+      <image src="/icons/xiaohua.png"></image>
+      <view  class="txt-box">
+        <text>笑话</text>
+      </view>
+    </navigator>
+    <navigator class="flex-item" url="/pages/quwen/index?type=ALL"  open-type="navigate"  hover-class="navigator-hover">
+      <image src="/icons/more2.png"></image>
+      <view  class="txt-box">
+        <text>更多</text>
+      </view>
+    </navigator>
+  </view>
+  <view class="recommend-box">
+    <view class="tip-nav flex-box">
+      <view class="lt">
+        <text>每日一语</text>
+      </view>
+      <navigator class="rt" url="/pages/quwen/index?type=ALL" open-type="navigate" hover-class="navigator-hover">
+        <text>更多</text>
+      </navigator>
+    </view>
+    <view class="cont-box  qwfd-listview">
+      <view class='item-container' >
+        <text>{{  recommend.cont }}</text>
+        <view class="share-box" style="{{publish == 0 ? 'display:none': 'display:block;'}}">
+          <image src="/icons/share.png"></image>
+          <text>分享</text>
+          <button open-type="share"></button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="hot-box">
+    <view class="tip-nav flex-box">
+      <view class="lt">
+        <text>精选趣文</text>
+      </view>
+      <navigator class="rt" url="/pages/quwen/index?type=ALL"  open-type="navigate"  hover-class="navigator-hover">
+        <text>更多</text>
+      </navigator>
+    </view>
+    <view class="cont-box qwfd-listview">
+      <block wx:for="{{  hostList }}" wx:key="item">
+        <view class='item-container' data-index="{{ index }}" data-id="{{ item._id }}">
+          <text>{{ item.cont }}</text>
+          <view class="zan-pennel">
+            <image src="/icons/love2.png"></image>
+            <text>被关注{{ item.likes }}次</text>
+          </view>
+          <view class="icon-label jakes" wx:if="{{ item.type == 0 }}">
+            <text># 段子</text>
+          </view>
+          <view class="icon-label quotation" wx:elif="{{ item.type == 1 }}">
+            <text># 语录</text>
+          </view>
+          <view class="icon-label phrase" wx:elif="{{ item.type == 2 }}">
+            <text># 心灵短语</text>
+          </view>
+          <view class="icon-label jakes2" wx:else>
+            <text># 冷笑话</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

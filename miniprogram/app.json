@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/boiling/index",
+    "pages/me/index",
+    "pages/about/index",
+    "pages/jokelike/index",
+    "pages/quwen/index",
+    "pages/search/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1188FF",
+    "navigationBarTitleText": "趣文沸点",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#1188ff",
+    "color": "#7A808B",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home2.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "个人中心",
+        "iconPath": "icons/me.png",
+        "selectedIconPath": "icons/me2.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

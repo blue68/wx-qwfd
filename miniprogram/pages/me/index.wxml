@@ -1,0 +1,51 @@
+<view class="container">
+  <view wx:if="{{ !isLogin }}"> <!-- 未登录 -->
+    <view class="no-login">
+      <text>登录后查看更多精彩内容</text>
+    </view>
+    <button type='primary'  bindtap='onGoLogin' class='btn-login'>
+      <text class='moto'>去登录</text>
+  </button >
+  </view>
+  <view wx:else>
+    <view class="me-container">
+      <view class="userinfo">
+        <view class="userinfo-avatar">
+          <open-data  type="userAvatarUrl"></open-data>
+        </view>
+          <open-data type="userNickName"></open-data>
+      </view>
+      <view class="main-pannel">
+        <view class="cont-box">
+          <view class="list-item flex" bindtap='onGoMylove'>
+            <view>
+              <image src="/icons/love2.png"/>
+              <text>我关注的</text>
+            </view>
+            <view class="more">
+              <image src="/icons/more.png"/>
+            </view>
+          </view>
+          <view class="list-item flex" bindtap='onShowGrllery'>
+            <view>
+              <image src="/icons/shang2.png" />
+              <text>点赞支持</text>
+            </view>
+            <view class="more">
+              <image src="/icons/more.png" />
+            </view>
+          </view>
+          <view class="list-item flex" bindtap='onGoAbout'>
+            <view >
+              <image src="/icons/about.png"/>
+              <text>关于小程序</text>
+             </view>
+            <view class="more">
+               <image src="/icons/more.png"/>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

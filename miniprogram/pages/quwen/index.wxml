@@ -1,0 +1,49 @@
+<!-- 页面内容 -->
+<view>
+  <view class='nav'>
+   <view class='nav-item' bindtap="search" data-type='ALL'  style="color:{{currentType=='ALL'? color.selectedColor : color.unselectedColor }}" >
+      <text>ALL</text>
+    </view>
+    <view class='nav-item'  bindtap="search" data-type='DY'  style="color:{{currentType=='DY'? color.selectedColor : color.unselectedColor }}">
+      <text>短语</text>
+    </view>
+    <view  class='nav-item'  bindtap="search" data-type='YL'  style="color:{{currentType=='YL'? color.selectedColor : color.unselectedColor }}">
+      <text>语录</text>
+    </view>
+    <view  class='nav-item'  bindtap="search" data-type='DZ'  style="color:{{currentType=='DZ'? color.selectedColor : color.unselectedColor }}">
+      <text>段子</text>
+    </view>
+    <view  class='nav-item'  bindtap="search" data-type='XH'  style="color:{{currentType=='XH'? color.selectedColor : color.unselectedColor }}">
+      <text>笑话</text>
+    </view>
+  </view>
+  <view class='qwfd-listview'>
+    <block wx:for="{{ jokes }}" wx:key="item">
+      <view class='item-container' data-index="{{ index }}"  data-id="{{ item._id }}" bindtap="tapLikes">
+        <text> {{ item.cont }} </text>
+        <view class="zan-pennel">
+          <image src="/icons/love.png"></image>
+          <text>{{ item.likes }}</text>
+        </view>
+        <view class="icon-label jakes" wx:if="{{ item.type == 0 }}">
+          <text># 段子</text>
+        </view>
+        <view class="icon-label quotation" wx:elif="{{ item.type == 1 }}">
+          <text># 语录</text>
+        </view>
+        <view class="icon-label phrase" wx:elif="{{ item.type == 2 }}">
+          <text># 心灵短语</text>
+        </view>
+        <view class="icon-label jakes2" wx:else>
+          <text># 冷笑话</text>
+        </view>
+      </view>
+    </block>
+    <loading type="circle" tips="请稍后"  show="{{show}}"></loading>
+  </view>
+  <view class="popup-menu">
+    <navigator class="flex-item" url="/pages/search/index" open-type="navigate" hover-class="navigator-hover">
+      <image src="/icons/search.png"></image>
+    </navigator>
+  </view>
+</view>

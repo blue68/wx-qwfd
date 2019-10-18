@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='logo-container'>
+    <view class='logo'>
+      <image src='/icons/qwfd.png' />
+    </view>
+  </view>
+  <view class='app-name'>
+    <view class='title'><text>趣文沸点</text></view>
+    <view class='desc'><text>全网最全的短语、段子在线查询工具</text></view>
+  </view>
+</view>

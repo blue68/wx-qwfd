@@ -1,0 +1,151 @@
+.container {
+  background: #F6F6F6;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+.category-box {
+  width: 100%;
+  height: 260rpx;
+  padding: 10rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  background: #FFF;
+}
+.flex-item {
+  font-size: 32rpx;
+  color: #454647;
+}
+.flex-item image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.flex-item .txt-box {
+  margin-top: 20rpx;
+}
+.navigator-hover {
+  opacity: .7;
+  background: transparent;
+}
+
+.tip-nav {
+  padding: 10rpx 30rpx;
+  justify-content: space-between !important;
+}
+.tip-nav .lt {
+  font-size: 38rpx;
+  color: #1188ff;
+}
+.tip-nav .rt {
+  font-size: 30rpx;
+  color: #9E9FA1;
+}
+
+.qwfd-listview {
+  padding: 10rpx 30rpx;
+  background: #F6F6F6;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+.qwfd-listview  .item-container {
+  position: relative;
+  margin: 20rpx 0rpx 40rpx;
+  padding: 60rpx 40rpx;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 54rpx;
+  color: #616161;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  background: #FFF;
+  border-radius: 8rpx;
+  border-bottom: 0px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.10);
+}
+
+.qwfd-listview  .item-container .zan-pennel {
+  height: 30rpx;
+  width: 100%;
+  line-height: 30rpx;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  text-align: right;
+  color: #1188FF;
+}
+
+.qwfd-listview  .item-container .zan-pennel image {
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+  margin-right: 6rpx;
+  vertical-align: top;
+}
+
+.qwfd-listview  .item-container .icon-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6rpx 8rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 22rpx;
+  line-height: 10px;
+  color: #FFF;
+  border-radius: 2rpx;
+}
+.jakes {
+  background: #FFBB11;
+}
+
+.quotation {
+  background: #1188FF;
+}
+
+.phrase {
+  background: #FF5511;
+}
+
+.jakes2 {
+  background: #F0594E;
+}
+
+.share-box {
+  position: absolute;
+  display: none;
+  width: 120rpx;
+  height: 60rpx;
+  bottom: 0rpx;
+  right: 10rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+
+.share-box image {
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+  margin-right: 6rpx;
+}
+.share-box text {
+  color: #1188FF;
+}
+
+.share-box button {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  z-index: 99;
+  bottom: 5rpx;
+}
+.share-box  .button-hover {
+  background-color: #FFF;
+}

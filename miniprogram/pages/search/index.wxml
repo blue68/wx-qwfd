@@ -1,0 +1,34 @@
+<!--miniprogram/pages/search/index.wxml-->
+<view class="search-box flex-box">
+  <view class="lt">
+    <image src="/icons/home_search_bar_search.png"></image>
+    <input class="search-txt" type="text" value="{{searchTxt}}" placeholder="请输入关键字搜索" placeholder-class="" confirm-type="done" bindconfirm="confirm"/>
+  </view>
+  <view class="rt" bindtap="cancel">
+    <text>取消</text>
+  </view>
+</view>
+<view class='qwfd-listview'>
+    <block wx:for="{{ jokes }}" wx:key="item">
+      <view class='item-container' data-index="{{ index }}"  data-id="{{ item._id }}" bindtap="tapLikes">
+        <text> {{ item.cont }} </text>
+        <view class="zan-pennel">
+          <image src="/icons/love.png"></image>
+          <text>{{ item.likes }}</text>
+        </view>
+        <view class="icon-label jakes" wx:if="{{ item.type == 0 }}">
+          <text># 段子</text>
+        </view>
+        <view class="icon-label quotation" wx:elif="{{ item.type == 1 }}">
+          <text># 语录</text>
+        </view>
+        <view class="icon-label phrase" wx:elif="{{ item.type == 2 }}">
+          <text># 心灵短语</text>
+        </view>
+        <view class="icon-label jakes2" wx:else>
+          <text># 冷笑话</text>
+        </view>
+      </view>
+    </block>
+    <loading type="circle" tips="请稍后"  show="{{show}}"></loading>
+  </view>

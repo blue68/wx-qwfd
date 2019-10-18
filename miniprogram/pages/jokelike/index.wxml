@@ -1,0 +1,38 @@
+<!-- 页面内容 -->
+<view class='qwfd-listview'>
+  <view wx:if="{{ jokes.length > 0 }}">
+    <block wx:for="{{ jokes }}" wx:key="item">
+      <view class='item-container' data-index="{{ index }}"  data-id="{{ item._id }}"  >
+        <text> {{ item.cont }} </text>
+        <view class="zan-pennel">
+          <view>
+            <image src="/icons/zan.png"></image>
+            <text>被关注{{ item.likes }}次</text>
+          </view>
+          <view class="zan-sub"  bindtap="unlike"  data-jokelikeId="{{item.jokelikeId}}">
+            <image src="/icons/unlike.png"></image>
+            <text>取消关注</text>
+          </view>
+        </view>
+        <view class="icon-label jakes" wx:if="{{ item.type == 0 }}">
+          <text># 段子</text>
+        </view>
+        <view class="icon-label quotation" wx:elif="{{ item.type == 1 }}">
+          <text># 语录</text>
+        </view>
+        <view class="icon-label phrase" wx:elif="{{ item.type == 2 }}">
+          <text># 心灵短语</text>
+        </view>
+        <view class="icon-label jakes2" wx:else>
+          <text># 冷笑话</text>
+        </view>
+      </view>
+    </block>
+    <loading type="circle" tips="请稍后" show="{{show}}"></loading>
+  </view>
+  <view wx:else>
+    <view class="empty">
+      <text>生活趣无忧，段子少不了！</text>
+    </view>
+  </view>
+</view>

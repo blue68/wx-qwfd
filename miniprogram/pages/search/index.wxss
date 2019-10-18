@@ -1,0 +1,103 @@
+
+.flex-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.search-box {
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: #FFF;
+}
+.pcs {
+  font-size: 26rpx;
+}
+.lt {
+  position: relative;
+  width: 85%;
+  height: 100%;
+}
+.lt image {
+  display: inline-block;
+  position: absolute;
+  top: 25rpx;
+  left: 20rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+.lt .search-txt {
+  padding-left: 55rpx;
+  border-radius: 10rpx;
+  color: rgba(0,0,0,0.5);
+  border: 1px solid #F6F6F6;
+  height: 70rpx;
+  font-size: 26rpx;
+}
+.rt {
+  margin-left: 20rpx;
+}
+.rt text {
+  color: #576B95;
+}
+
+.qwfd-listview {
+  padding: 20rpx;
+  background: #F6F6F6;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+.item-container {
+  position: relative;
+  margin: 20rpx 0rpx 40rpx;
+  padding: 60rpx 40rpx 30rpx;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 54rpx;
+  color: #616161;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  background: #FFF;
+  border-radius: 8rpx;
+  border-bottom: 0px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.10);
+}
+.zan-pennel {
+  height: 30rpx;
+  width: 100%;
+  line-height: 30rpx;
+  font-size: 24rpx;
+  text-align: right;
+}
+.zan-pennel image {
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+  margin-right: 6rpx;
+  vertical-align: top;
+}
+.icon-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6rpx 8rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 22rpx;
+  line-height: 10px;
+  color: #FFF;
+  border-radius: 2rpx;
+}
+.jakes {
+  background: #FFBB11;
+}
+.quotation {
+  background: #1188FF;
+}
+.phrase {
+  background: #FF5511;
+}
+.jakes2 {
+  background: #F0594E;
+}
