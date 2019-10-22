@@ -1,7 +1,7 @@
 function basicRequest(url, successCallBack) {
   wx.request({
     url: url,
-    headers: {
+    header: {
       "Content-Type": "application/json"
     },
     success: function (res) {
