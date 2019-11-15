@@ -1,0 +1,32 @@
+/* components/selectbox/selectbox.wxss */
+.qwfd-select-box {
+  width: 100%;
+  display: flex;
+  direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: #FFF;
+}
+.qwfd-select-box .icon-pannel image{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.qwfd-select-box .lt-box, .qwfd-select-box .rt-box {
+  position: relative;
+}
+.qwfd-select-box .lt-box .icon-box, .qwfd-select-box .rt-box .icon-box {
+  position: absolute;
+  bottom: 0rpx;
+  right: -30rpx;
+}
+
+.qwfd-select-box .lt-box .icon-box image, .qwfd-select-box .rt-box .icon-box image {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+}

@@ -1,0 +1,12 @@
+<view class="speech-trans-container">
+  <view class="sht-cont">
+    <view wx:if="{{ audioList && audioList.length > 0 }}">
+      <view wx:for="{{ audioList }}" wx:for-index="idx" wx:key="index" wx:for-item="item">
+        <backaudio file-path="{{item.filePath}}" target="{{item.target}}" source="{{item.source}}"/>
+      </view>
+    </view>
+  </view>
+  <view class="sht-bottom">
+    <button type="primary" bindtap="onStart">{{btnTxt}}</button>
+  </view>
+</view>

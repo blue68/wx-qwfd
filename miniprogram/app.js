@@ -7,6 +7,7 @@ App({
     openId: '',
     userInfo: null,
     publish: 1,
+    systemInfo: 0,
     auth: {
       'scope.userInfo': false
     }
@@ -117,6 +118,7 @@ App({
   onShow: function() {
     this.updateManager();
     this.getAccess();
+    this.getSystemInfo();
   },
   onLaunch: function () {
     this.updateManager();
@@ -125,10 +127,11 @@ App({
     } else {
       wx.cloud.init({
         // 如不填则使用默认环境（第一个创建的环境）
-        env: '云环境ID',
+        env: '填写自己申请的云环境ID',
         traceUser: true,
       });
       this.getAccess();
+      this.getSystemInfo();
     }
   },
   updateManager: function() {
@@ -155,5 +158,9 @@ App({
         icon: 'none'
       });
     });
+  },
+  getSystemInfo: function() {
+    let systemInfo = wx.getSystemInfoSync();
+    this.globalData.systemInfo = systemInfo;
   }
 });

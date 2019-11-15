@@ -1,0 +1,38 @@
+<view class="qwfd-select-box">
+  <block wx:if="{{model == 0}}">
+    <view class="lt-box">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{ars}}">
+        <view class="picker">
+          <text>{{ars[index]}}</text>
+        </view>
+      </picker>
+      <view class="icon-box">
+        <image src="./icons/bottom.png"></image>
+      </view>
+    </view>
+    <view class="icon-pannel" bindtap="tabClick">
+      <image src="./icons/trans.png"></image>
+    </view>
+    <view class="rt-box">
+      <text>中文</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="rt-box">
+      <text>中文</text>
+    </view>
+    <view class="icon-pannel" bindtap="tabClick">
+      <image src="./icons/trans.png"></image>
+    </view>
+    <view class="lt-box">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{ars}}">
+        <view class="picker">
+          <text>{{ars[index]}}</text>
+        </view>
+      </picker>
+      <view class="icon-box">
+        <image src="./icons/bottom.png"></image>
+      </view>
+    </view>
+  </block>
+</view>

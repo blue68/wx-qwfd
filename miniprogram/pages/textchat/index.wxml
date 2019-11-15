@@ -1,0 +1,35 @@
+<!--miniprogram/pages/textchat/index.wxml-->
+<view class="container">
+  <scroll-view scroll-y scroll-anchoring="true" style="height:100vh;margin-bottom: 120rpx;" scroll-into-view="{{totalLast}}">
+    <view id="item{{index+1}}" wx:for="{{ list }}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}"  >
+      <view wx:if="{{ item.type == 1 }}">
+        <view class="flex item lt">
+          <view class="chat">
+            <image src="/icons/robot.png"/>
+          </view>
+          <view class="txt">
+            {{ item.msg }}
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="flex rt item">
+          <view class="txt">
+            {{ item.msg }}
+          </view>
+          <view class="userinfo-avatar">
+            <open-data  type="userAvatarUrl"></open-data>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="flex bottom-box">
+    <view class="txt">
+      <input type="text" confirm-type="done" hold-keyboard="true" placeholder="请输入感兴趣的话题..." bindinput="inputChange" value="{{question}}"></input>
+    </view>
+    <view class='btn-box'>
+      <button class="btn" disabled="{{disabled}}" bindtap="send">发送</button>
+    </view>
+  </view>
+</view>

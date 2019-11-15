@@ -1,0 +1,30 @@
+<view>
+  <view class="nav-container">
+    <!-- 获取设备像素比，动态设置高度 -->
+    <view class="status-box" style="height: {{statusBarHeight}}rpx"></view>
+    <view class="nav-box flex">
+      <view class="back-pannel" bindtap="onBack">
+        <image src="/icons/back.png"></image>
+      </view>
+      <view class="cont-pannel">
+        <selectbox id="selectbox-comp" bind:tabchange="onLangeChange"/>
+      </view>
+    </view>
+  </view>
+  <tabnav items="{{ items }}" bg-color="#1188FF" def-index="3" bind:tabchange="onTabChange"/>
+  <view wx:if="{{currentIndex == 0}}" style="height: {{txtHeight}}px">
+    <!-- 文本翻译 start -->
+    <texttrans id="text-trans-comp" source="{{source}}" target="{{target}}" contHeight="{{txtHeight}}" />
+    <!-- 文本翻译 end -->
+  </view>
+  <view wx:elif="{{currentIndex == 1}}" style="margin-top:10rpx;height: {{txtHeight}}px;">
+    <!-- 语音翻译 start -->
+    <speechtranslate id="speech-trans-comp" source="{{source}}" target="{{target}}" />
+    <!-- 语音翻译 end -->
+  </view>
+  <view wx:else style="height: {{txtHeight}}px">
+    <!-- 拍译 start -->
+    <imagetranslate id="img-trans-comp" source="{{source}}" target="{{target}}" />
+    <!-- 拍译 start -->
+  </view>
+</view>

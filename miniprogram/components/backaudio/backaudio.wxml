@@ -1,0 +1,15 @@
+<view class="qwfd-wrapper">
+  <view class="item-box">{{ source }}</view>
+  <view  class="item-box">{{ target }}</view>
+
+  <view wx:if="{{!isStart}}">
+    <view class="exec-btn" bindtap="onplay">
+      <image src="./icons/start.png"></image>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="exec-btn" bindtap="onpause">
+      <image src="./icons/stop.png"></image>
+    </view>
+  </view>
+</view>

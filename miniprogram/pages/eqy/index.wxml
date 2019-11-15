@@ -1,0 +1,30 @@
+<!--miniprogram/pages/eqy/index.wxml-->
+<view class="container">
+  <view class="tip-box">
+    <view class="title">
+      <text>沸点</text>
+    </view>
+    <view class="desc">
+      <text>更多有趣工具正在努力开发中...</text>
+    </view>
+  </view>
+  <view class="flex nav-box">
+    <navigator class="flex-item flex xl" url="/pages/textchat/index">
+      <image src="/icons/msg.png"></image>
+      <text>智能闲聊</text>
+    </navigator>
+    <view class="flex-item flex tpsb" bindtap="tip">
+      <image src="/icons/tpsb.png" ></image>
+      <text>图片识别</text>
+    </view>
+    <navigator class="flex-item flex jqfy" url="/pages/translation/index">
+      <image src="/icons/jqfy.png"></image>
+      <text>机器翻译</text>
+    </navigator>
+    <view class="flex-item flex tptx" bindtap="tip">
+      <image src="/icons/tpxg.png"></image>
+      <text>图片特效</text>
+    </view>
+  </view>
+
+</view>

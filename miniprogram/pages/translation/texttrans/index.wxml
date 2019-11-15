@@ -1,0 +1,5 @@
+<view class="main-cont-box">
+    <textarea style="height: {{txtHeight}}rpx" class="txt" maxlength="-1" show-confirm-bar	="true" placeholder="在此输入要翻译的文本..." placeholder-style="font-size: 30rpx; color: #999;" bindinput="confirm" value="{{orgText}}"></textarea>
+    <view  class='clear-txt' bindtap="clearAll" style="display:{{ isShowClear ? 'block': 'none' }} "></view>
+    <view style="height: {{txtHeight}}rpx"  class="txt-result">{{transText}}</view>
+  </view>

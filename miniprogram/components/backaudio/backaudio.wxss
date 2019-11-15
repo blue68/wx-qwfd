@@ -1,0 +1,24 @@
+/* components/backaudio/backaudio.wxss */
+.qwfd-wrapper {
+  position: relative;
+  padding: 30rpx;
+  width: 50%;
+  background: #f2f2f2;
+  border-radius: 15rpx;
+  margin: 30rpx;
+  min-height: 60rpx;
+}
+.qwfd-wrapper  .item-box {
+  margin: 10rpx;
+}
+
+.qwfd-wrapper .exec-btn {
+  position: absolute;
+  bottom: 20rpx;
+  right: 10rpx;
+}
+
+.qwfd-wrapper .exec-btn image {
+  width: 40rpx;
+  height: 32rpx;
+}

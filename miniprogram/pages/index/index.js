@@ -8,7 +8,7 @@ Page({
   onLoad: function() {
     let self = this;
     wx.showLoading({});
-    app.getJokeListByOpts(0, 50, [0, 1, 2, 3], null, (data) => {
+    app.getJokeListByOpts(0, 50, [1, 2], null, (data) => {
       wx.hideLoading();
       let len = data.length;
       let random = self.getRandomInt(0, len);

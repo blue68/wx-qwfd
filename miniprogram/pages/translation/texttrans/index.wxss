@@ -1,0 +1,56 @@
+.main-cont-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 15rpx;
+  background: #FFF;
+  border-bottom: 1px solid #FFF;
+  box-sizing: border-box;
+}
+
+.main-cont-box .txt {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: #616161;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  box-sizing: border-box;
+}
+
+.main-cont-box .txt-result {
+  margin-top: 10rpx;
+  width: 100%;
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: #616161;
+  border-top: 1px solid #f7f7f7;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  box-sizing: border-box;
+}
+.clear-txt {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  z-index: 1006;
+}
+
+.clear-txt:before, .clear-txt:after{
+  content:''; 
+  height: 4rpx; 
+  width: 30rpx; 
+  display: block; 
+  background: #999; 
+  border-radius: 10rpx;
+  position: absolute; 
+  right: 12rpx; 
+  top: 23rpx; 
+  transform:rotate(-45deg);
+}
+
+.clear-txt:after{
+  transform:rotate(45deg);
+}

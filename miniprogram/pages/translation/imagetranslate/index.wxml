@@ -1,0 +1,29 @@
+<!--miniprogram/pages/translation/imagetranslate/index.wxml-->
+<view class="image-trans-container">
+  <view class="top-box">
+    <view class="item-box lt {{show ? 'show' : 'hidden'}}" >
+      <image src="{{files[0]}}" bindtap="previewImage"></image>
+    </view>
+    <view class="item-box rt" bindtap="onChoosel">
+      <image src="/icons/choosel.png"></image>
+    </view>
+  </view>
+  <view class="bottom-box">
+    <view wx:if="{{ show }}">
+      <view wx:if="{{ content && content.length > 0 }}">
+        <view wx:for="{{ content }}" wx:for-index="idx" wx:key="index" wx:for-item="item">
+          <view class="txt-item-box">
+            <view>{{ item.source_text }}</view>
+            <view>{{ item.target_text }}</view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="txt-item-box">
+          <view>未识别出内容</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

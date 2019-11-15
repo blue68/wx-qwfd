@@ -2,7 +2,7 @@
 <view>
   <view class='nav'>
    <view class='nav-item' bindtap="search" data-type='ALL'  style="color:{{currentType=='ALL'? color.selectedColor : color.unselectedColor }}" >
-      <text>ALL</text>
+      <text>全部</text>
     </view>
     <view class='nav-item'  bindtap="search" data-type='DY'  style="color:{{currentType=='DY'? color.selectedColor : color.unselectedColor }}">
       <text>短语</text>

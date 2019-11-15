@@ -1,0 +1,69 @@
+/* miniprogram/pages/eqy/index.wxss */
+page {
+  background: #FFF;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-item {
+  width: 35%;
+  height: 160rpx;
+  margin: 40rpx;
+  flex-grow: 1;
+  color: #FFF;
+  font-size: 34rpx;
+  border-radius : 10rpx;
+  justify-content: center;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+.xl {
+  background:  #FFBB11;
+}
+
+.tpsb {
+
+  background: #FF5511;
+}
+
+.jqfy {
+  background: #1188FF;
+}
+
+.tptx {
+  background: #36ab60;
+}
+
+.tip-box {
+  margin: 160rpx 40rpx 70rpx;
+}
+
+.tip-box .title {
+  font-size: 60rpx;
+  color: #616161;
+}
+
+.tip-box .desc {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #747272;
+}
+
+.flex-item image {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.nav-box {
+  width: 100%;
+  box-sizing: border-box;
+}

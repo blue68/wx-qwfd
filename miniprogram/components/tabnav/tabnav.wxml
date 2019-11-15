@@ -1,0 +1,12 @@
+<!--components/tabnav/tabnav.wxml-->
+<view class="qwfd-wrapper" style="background:{{bgColor}}">
+  <view  class="sv-box">
+    <block wx:for="{{ items }}" wx:for-item="item" wx:for-index="index" wx:key="{{ index }}"  >
+      <view data-index="{{ item.index }}" bindtap="tabClick" class="item {{ currentIndex == item.index ? 'sel' : '' }}">
+        <text>{{ item.value }}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+

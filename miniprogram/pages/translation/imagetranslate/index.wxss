@@ -1,0 +1,59 @@
+/* miniprogram/pages/translation/imagetranslate/index.wxss */
+.image-trans-container {
+  height: 100%;
+  margin-top: 10rpx;
+  position: relative;
+  box-sizing: border-box;
+  background: #FFF;
+}
+
+.top-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid #F2f2f2;
+}
+.hidden{
+  display: none;
+}
+.show {
+  display: block;
+}
+.item-box {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #f2f2f2;
+}
+.item-box image {
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: middle
+}
+.lt image {
+  width: 100%;
+  height: 100%;
+}
+.rt {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-box {
+  padding: 10rpx;
+  height: 70%;
+  overflow-y: auto;
+}
+.bottom-box .txt-item-box {
+  margin: 10rpx;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 15rpx;
+}

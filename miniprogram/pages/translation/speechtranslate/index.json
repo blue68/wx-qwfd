@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "backaudio": "/components/backaudio/backaudio"
+  }
+}

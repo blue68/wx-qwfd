@@ -26,6 +26,15 @@
               <image src="/icons/more.png"/>
             </view>
           </view>
+          <view class="list-item flex" >
+            <view class="flex">
+              <image src="/icons/contact_us.png"/>
+              <button open-type="contact" bindcontact="handleContact" class="btn-dev">联系开发者</button>
+            </view>
+            <view class="more">
+              <image src="/icons/more.png"/>
+            </view>
+          </view>
           <view class="list-item flex" bindtap='onShowGrllery'>
             <view>
               <image src="/icons/shang2.png" />

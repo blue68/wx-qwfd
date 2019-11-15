@@ -83,8 +83,20 @@
   margin-right: 30rpx;
 }
 .list-item .more image {
-   width: 50rpx;
+  width: 50rpx;
   height: 50rpx;
   display: inline-block;
   vertical-align: middle;
+}
+.list-item .btn-dev {
+  display: inline-block;
+  border: 0px;
+  background-color: transparent;
+  text-align: left;
+  padding-left: 0rpx;
+  overflow: none;
+  color: #616161;
+}
+.list-item .btn-dev:after {
+  border: 0px;
 }

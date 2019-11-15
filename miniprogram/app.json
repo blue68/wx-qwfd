@@ -7,7 +7,15 @@
     "pages/about/index",
     "pages/jokelike/index",
     "pages/quwen/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/textchat/index",
+    "pages/eqy/index",
+    "pages/imgdiscern/index",
+    "pages/imgeffects/index",
+    "pages/translation/index",
+    "pages/translation/texttrans/index",
+    "pages/translation/speechtranslate/index",
+    "pages/translation/imagetranslate/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -28,6 +36,12 @@
         "selectedIconPath": "icons/home2.png"
       },
       {
+        "pagePath": "pages/eqy/index",
+        "text": "沸点",
+        "iconPath": "icons/eqy.png",
+        "selectedIconPath": "icons/eqy2.png"
+      },
+      {
         "pagePath": "pages/me/index",
         "text": "个人中心",
         "iconPath": "icons/me.png",
@@ -39,6 +53,12 @@
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.1",
+      "provider": "wx069ba97219f66d99"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }

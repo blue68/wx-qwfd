@@ -1,0 +1,22 @@
+/* pages/translation/speechtranslate/index.wxss */
+.speech-trans-container {
+  height: 80%;
+  position: relative;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #FFF;
+}
+.sht-bottom {
+  position: fixed;
+  bottom: 80rpx;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+}
+.sht-bottom button{
+  width: 50%;
+  padding: 5rpx;
+  margin-top: 20rpx;
+  border-radius: 13rpx;
+  background: #1188FF !important;
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "tabnav": "/components/tabnav/tabnav",
+    "selectbox": "/components/selectbox/selectbox",
+    "texttrans": "/pages/translation/texttrans/index",
+    "speechtranslate": "/pages/translation/speechtranslate/index",
+    "imagetranslate": "/pages/translation/imagetranslate/index"
+  },
+  "navigationStyle": "custom"
+}
