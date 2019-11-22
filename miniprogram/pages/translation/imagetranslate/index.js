@@ -16,7 +16,7 @@ Component({
   data: {
     files: [],
     show: false,
-    content: '',
+    content: [],
     source: '', // 源语言
     target: '', // 目标语言
   },
@@ -46,7 +46,7 @@ Component({
           const tempFilePath = res.tempFilePaths[0];
 
           if(!tempFilePath.match(/.*.(png|jpg|bmp)/)) {
-            wx.hideLoading()
+            wx.hideLoading();
             wx.showToast({
               title: '暂不支持该格式的图片，请选择png、jpg、bmp格式',
               icon: 'none'
@@ -57,7 +57,7 @@ Component({
           var fileSize = res.tempFiles[0].size;
 
           if (fileSize / (1024 * 1024) > 1) {
-            wx.hideLoading()
+            wx.hideLoading();
             wx.showToast({
               title: '图片大小超过1M',
               icon: 'none'
@@ -82,6 +82,12 @@ Component({
             }
           });
         },
+        fail: function() {
+          wx.hideLoading();
+        },
+        complete: function() {
+          wx.hideLoading();
+        }
       })
     },
     ocrImage: function(data) {
@@ -89,7 +95,7 @@ Component({
       Util.AiReq({
         url: Api.nlp_imagetranslate,
         data: {
-          "scene": 'word',
+          "scene": 'doc',
           "source": this.data.source,
           "target": this.data.target,
           "image": data,
@@ -98,9 +104,8 @@ Component({
         header: 'application/x-www-form-urlencoded',
         method: 'POST',
         success: (res) => {
+          wx.hideLoading();
           if (res.data.ret == 0) {
-            wx.hideLoading()
-
             that.setData({
               content: res.data.data.image_records
             });
@@ -114,6 +119,13 @@ Component({
           }
         },
         fail: (e) => {
+          wx.hideLoading();
+          wx.showToast({
+            title: '系统繁忙请稍后重试...',
+            icon: 'none',
+            mask: true,
+            duration: 1000
+          });
         }
       });
     },
@@ -130,6 +142,25 @@ Component({
       this.setData({
         source: source,
         target: target
+      });
+    },
+    onClipboard: function() {
+      let cont = this.data.content;
+      let strs = '', ars = [];
+
+      for (let i = 0; i < cont.length; i ++) {
+        let contItem = cont[i];
+        ars.push(contItem.source_text + '\n' + contItem.target_text);
+      }
+      strs = ars.join('\n');
+
+      wx.setClipboardData({
+        data: strs,
+        success(res) {
+          wx.getClipboardData({
+            success(res) {}
+          });
+        }
       });
     }
   }

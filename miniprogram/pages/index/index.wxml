@@ -42,8 +42,8 @@
       </navigator>
     </view>
     <view class="cont-box  qwfd-listview">
-      <view class='item-container' >
-        <text>{{  recommend.cont }}</text>
+      <view class='item-container' bindtap="onDetail">
+        <text>{{ recommend.cont }}</text>
         <view class="share-box" style="{{publish == 0 ? 'display:none': 'display:block;'}}">
           <image src="/icons/share.png"></image>
           <text>分享</text>
@@ -63,11 +63,11 @@
     </view>
     <view class="cont-box qwfd-listview">
       <block wx:for="{{  hostList }}" wx:key="item">
-        <view class='item-container' data-index="{{ index }}" data-id="{{ item._id }}">
+        <view class='item-container' data-index="{{ index }}" data-id="{{ item._id }}"  bindtap="onDetail">
           <text>{{ item.cont }}</text>
           <view class="zan-pennel">
             <image src="/icons/love2.png"></image>
-            <text>被关注{{ item.likes }}次</text>
+            <text>被浏览{{ item.likes }}次</text>
           </view>
           <view class="icon-label jakes" wx:if="{{ item.type == 0 }}">
             <text># 段子</text>

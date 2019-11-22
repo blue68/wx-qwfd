@@ -1,0 +1,82 @@
+/* miniprogram/pages/quwen/detail.wxss */
+.quwen-box {
+  position: relative;
+  margin: 20rpx 0rpx 40rpx;
+  padding: 100rpx 20rpx 40rpx;
+  height: 100%;
+  font-size: 38rpx;
+  line-height: 54rpx;
+  color: #616161;
+  text-align: justify;
+  letter-spacing: 1.8px;
+  background: #FFF;
+  border-bottom: 0px;
+}
+
+.quwen-box .zan-pennel {
+  height: 30rpx;
+  width: 100%;
+  line-height: 30rpx;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  text-align: right;
+  color: #1188FF;
+}
+
+.quwen-box  .zan-pennel image {
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+  margin-right: 6rpx;
+  vertical-align: top;
+}
+.quwen-box .icon-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6rpx 8rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 22rpx;
+  line-height: 10px;
+  color: #FFF;
+  border-radius: 2rpx;
+}
+
+.jakes {
+  background: #FFBB11;
+}
+
+.quotation {
+  background: #1188FF;
+}
+
+.phrase {
+  background: #FF5511;
+}
+
+.jakes2 {
+  background: #F0594E;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+.bottom-nav {
+  margin-top: 100rpx;
+}
+
+.bottom-nav .item-box {
+  position: relative;
+  font-size: 30rpx;
+}
+
+.bottom-nav .item-box image {
+  width: 48rpx;
+  height: 48rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+  vertical-align: top;
+}

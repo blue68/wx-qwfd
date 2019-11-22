@@ -29,5 +29,23 @@ Page({
       title: '一起欣赏趣文之乐',
       path: `pages/index/index`
     }
+  },
+  onDetail: function (e) {
+    let dataset = e.currentTarget.dataset;
+    let id = this.data.recommend._id;
+    
+    if (dataset && dataset.id) {
+      id = dataset.id;
+    }
+    
+    app.checkAuth(function (flag) {
+      if (flag) {
+        wx.redirectTo({
+          url: '/pages/quwen/detail?jokeId=' + id
+        });
+      } else {
+        app.navigateToLogin(); // 跳转至登录页面
+      }
+    });
   }
 });

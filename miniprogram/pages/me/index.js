@@ -1,4 +1,5 @@
 import Util from '../../utils/util';
+
 const app = getApp();
 let self;
 

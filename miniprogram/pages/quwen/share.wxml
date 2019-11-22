@@ -1,0 +1,7 @@
+<!--miniprogram/pages/quwen/share.wxml-->
+<view class="container">
+  <canvas canvas-id="myCanvas" style="width:{{width}}px; height:{{height}}px;"></canvas>
+  <view class="bottom-box">
+    <button bindtap="onSave" type="primary">保存到相册</button>
+  </view>
+</view>

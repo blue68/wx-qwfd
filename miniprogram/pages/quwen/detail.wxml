@@ -1,0 +1,35 @@
+<!--miniprogram/pages/quwen/detail.wxml-->
+<view>
+ <view class="quwen-box">
+    <text>{{jokeInfo.cont}}</text>
+    <view class="zan-pennel">
+      <text>{{jokeInfo.likes}} 人浏览</text>
+    </view>
+    <view class="icon-label jakes" wx:if="{{ jokeInfo.type == 0 }}">
+      <text># 段子</text>
+    </view>
+    <view class="icon-label quotation" wx:elif="{{ jokeInfo.type == 1 }}">
+      <text># 语录</text>
+    </view>
+    <view class="icon-label phrase" wx:elif="{{ jokeInfo.type == 2 }}">
+      <text># 心灵短语</text>
+    </view>
+    <view class="icon-label jakes2" wx:else>
+      <text># 冷笑话</text>
+    </view>
+    <view class="flex bottom-nav">
+      <view class="item-box" bindtap="onClipboard">
+        <image src="/icons/copy2.png" width="30" hidden="30"></image>
+        <text>文本拷贝</text>
+      </view>
+      <view class="item-box" bindtap="onShare">
+        <image src="/icons/share2.png" width="30" hidden="30"></image>
+        <text>生成海报</text>
+      </view>
+      <view class="item-box" bindtap="onFollow">
+        <image src="/icons/follow.png" width="30" hidden="30"></image>
+        <text>{{followText}}</text>
+      </view>
+    </view>
+  </view>
+</view>

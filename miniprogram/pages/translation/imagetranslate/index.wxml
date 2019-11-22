@@ -20,9 +20,14 @@
       </view>
       <view wx:else>
         <view class="txt-item-box">
-          <view>未识别出内容</view>
+          <view></view>
         </view>
       </view>
+    </view>
+  </view>
+  <view wx:if="{{ show }}">
+    <view class="clipboard-box" bindtap="onClipboard">
+      <image src="/icons/copy.png"></image>
     </view>
   </view>
 </view>

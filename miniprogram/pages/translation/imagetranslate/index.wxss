@@ -57,3 +57,15 @@
   border-bottom: 1px solid #f2f2f2;
   padding: 15rpx;
 }
+.clipboard-box {
+  position: fixed;
+  bottom: 80rpx;
+  right: 50rpx;
+  opacity: .7;
+  background: transparent;
+}
+
+.clipboard-box image {
+  width: 120rpx;
+  height: 120rpx;
+}

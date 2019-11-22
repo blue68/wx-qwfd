@@ -8,6 +8,8 @@
   -  每日一语
   -  精选趣文
 - 查询列表页面
+- 详情页面
+- 海报生成页面
 - 搜索页面
 - 我的页面
 - 我的关注
@@ -36,6 +38,22 @@ module.exports = {
 }
 
 ````
+
+#### App_id 值变更
+
+```js
+
+  1. 修改 project.config.json
+
+  // "appid": "小程序appid"
+
+  2. 修改 utils/util.js 文件中 APP_ID & 变量为自己申请的值
+
+  // const APP_ID = '自己申请的APP_ID';
+  // const APP_KEY = '自己申请的APP_KEY';
+
+```
+
 
 #### 签名相关逻辑
 
@@ -128,6 +146,8 @@ function aiReq(param) {
 
 ![首页](./images/index.png)
 ![列表](./images/list.png)
+![详情](./images/detail.png)
+![海报生成](./images/shareimg.png)
 ![搜索](./images/search.png)
 ![我的关注](./images/like.png)
 ![沸点](./images/feidian.png)

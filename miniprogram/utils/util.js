@@ -144,6 +144,10 @@ function aiReq(param) {
   });
 }
 
+function randomNum(range) {
+  return Math.floor(Math.random() * (range - 0)) + 0;
+}
+
 
 module.exports = {
   formatTime,
@@ -152,5 +156,6 @@ module.exports = {
   showModel,
   getTempFileURL,
   AiReq: aiReq,
-  baseReq: basicRequest
+  baseReq: basicRequest,
+  randomNum: randomNum
 }

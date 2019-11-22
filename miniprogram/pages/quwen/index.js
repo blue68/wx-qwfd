@@ -185,8 +185,11 @@ Page({
           app.checkAuth(function(flag) {
             if (flag) {
               // 与用户关联
-              let globalData = app.getGlobalData();
-              self.addJokeLikeWithSelf(globalData.userId, _id, function(st) {
+              // let globalData = app.getGlobalData();
+              // self.addJokeLikeWithSelf(globalData.userId, _id, function(st) {
+              // });
+              wx.redirectTo({
+                url: '/pages/quwen/detail?jokeId=' + _id
               });
             } else {
               app.navigateToLogin(); // 跳转至登录页面

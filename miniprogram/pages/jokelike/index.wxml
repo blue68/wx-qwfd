@@ -7,7 +7,7 @@
         <view class="zan-pennel">
           <view>
             <image src="/icons/zan.png"></image>
-            <text>被关注{{ item.likes }}次</text>
+            <text>被浏览{{ item.likes }}次</text>
           </view>
           <view class="zan-sub"  bindtap="unlike"  data-jokelikeId="{{item.jokelikeId}}">
             <image src="/icons/unlike.png"></image>
